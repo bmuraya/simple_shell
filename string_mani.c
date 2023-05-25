@@ -1,8 +1,7 @@
 #include "shell_header.h"
 
 /**
- * Function declaration getLength
- * - Get the lenght of a number.
+ * getLength - Get the lenght of a number.
  * @n: type int number.
  * Return: Lenght of a number.
  */
@@ -29,8 +28,7 @@ int getLength(int n)
 	return (lenght);
 }
 /**
- * Function declaration sh_itoa 
- * - function converts int to string.
+ * sh_itoa - function converts int to string.
  * @n: type int number
  * Return: String.
  */
@@ -68,8 +66,7 @@ char *sh_itoa(int n)
 }
 
 /**
- * Function declaration _atoi 
- * - converts a string to an integer.
+ * _atoi - converts a string to an integer.
  * @s: input string.
  * Return: integer.
  */
