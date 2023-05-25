@@ -1,39 +1,35 @@
 #include "shell_header.h"
 
 /**
- * Function declaration data_free and initialization 
- * frees data struct to data_free
+ * data_free - frees data structure
+ *
  * @shell_data: data structure
  * Return: no return
  */
 void data_free(data_shell *shell_data)
 {
 	unsigned int i;
-	i= 0;
-
-    while (shell_data->_environ[i])
-    {
-        free(shell_data->_environ[i]);
-        i++;
-    }
-
+	i = 0;
+	while (shell_data->_environ[i])
+	{
+		free(shell_data->_environ[i]);
+		i++;
+	}
 	free(shell_data->_environ);
 	free(shell_data->pid);
 }
 
 /**
- * Function declaration data_set
- * data_set Initialize data structure
+ * data_set -data structure
  *
  * @shell_data: data structure
- * @ac: argc
- * @av: argv 
+ * @av: argv
  * Return: no return
  */
 void data_set(data_shell *shell_data, char **av)
 {
-	unsigned int i; 
-	i= 0;
+	unsigned int i;
+	i = 0;
 
 	shell_data->av = av;
 	shell_data->input = NULL;
@@ -58,17 +54,15 @@ void data_set(data_shell *shell_data, char **av)
 }
 
 /**
- * Main Function declaration Entry Point
- *
- * @ac: argc
- * @av: argv 
- *
+ * main - Entry point
+ * @ac:argc
+ * @av:argv
  * Return: 0 on success.
  */
 int main(int ac, char **av)
 {
 	data_shell shell_data;
-	(void) ac;
+	(void)ac;
 
 	signal(SIGINT, get_Signal);
 	data_set(&shell_data, av);
