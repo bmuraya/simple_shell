@@ -11,7 +11,7 @@ Our shell has support for the following built-in commands:
 | ------------------- | ----------------------------------------------------------------------------------------- |
 | Main.c            |  Entry Point of the shell program.                                          |
 | shell.header                | prototype header file.                                                                    |
-| setenv [var][value] | Set an environment variable and value. If the variable exists, the value will be updated. |
+| Memory.c  | Memory allocation  checking of memory block |
 | alias[name[='value]]| Reads aliases name                                                                        |
 | unsetenv [var]      | Remove an environment variable.                                                           |
 | cd [dir]            | Change the directory.                                                                     |
