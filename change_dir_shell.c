@@ -1,8 +1,7 @@
 #include "shell_header.h"
 
 /**
- * Function declaration cd_p_dir 
- * - changes to the parent directory
+ * cd_p_dir - changes to the parent directory
  *
  * @shell_data: data relevant (environ)
  *
@@ -53,8 +52,7 @@ void cd_p_dir(data_shell *shell_data)
 }
 
 /**
- * Function declaration cd_dir_ag 
- * - changes to a directory given by the user
+ * cd_dir_ag - changes to a directory given by the user
  *
  * @shell_data: data relevant (directories)
  * Return: no return
@@ -88,8 +86,7 @@ void cd_dir_ag(data_shell *shell_data)
 }
 
 /**
- * Function declaration previous_cdir 
- * - changes to the previous directory
+ * previous_cdir - changes to the previous directory
  *
  * @shell_data: data relevant (environ)
  * Return: no return
@@ -131,8 +128,7 @@ void previous_cdir(data_shell *shell_data)
 }
 
 /**
- * Function declaration shell_cd 
- * - changes current directory
+ * shell_cd - changes current directory
  *
  * @shell_data: data relevant
  * Return: 1 on success
@@ -177,8 +173,7 @@ int shell_cd(data_shell *shell_data)
 
 
 /**
- * Function declaration cd_dir_ag_home 
- * - changes to home directory
+ * cd_dir_ag_home - changes to home directory
  *
  * @shell_data: data relevant (environ)
  * Return: no return
