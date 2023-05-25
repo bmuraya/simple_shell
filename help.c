@@ -1,8 +1,7 @@
 #include "shell_header.h"
 
 /**
- * Function declaration help_envirn
- * Help information for the builtin env
+ * help_envirn - Help information for the builtin env
  * Return: no return
  */
 void help_envirn(void)
@@ -16,8 +15,7 @@ void help_envirn(void)
 }
 
 /**
- * Function declaration help_setenv 
- * Help information for the builtin setenv
+ * help_setenv - Help information for the builtin setenv
  * Return: no return
  */
 void help_setenv(void)
@@ -33,8 +31,7 @@ void help_setenv(void)
 }
 
 /**
- * Function declaration help_unsetenv 
- * Help information for the builtin unsetenv
+ * help_unsetenv - Help information for the builtin unsetenv
  * Return: no return
  */
 void help_unsetenv(void)
@@ -47,8 +44,7 @@ void help_unsetenv(void)
 }
 
 /**
- * Function declaration help_general
- * Entry point for help information for the help builtin
+ * help_general - Entry point for help information for the help builtin
  * Return: no return
  */
 void help_general(void)
@@ -70,8 +66,7 @@ void help_general(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * Function declaration help_exit
- * Help information fot the builtin exit
+ * help_exit - Help information fot the builtin exit
  * Return: no return
  */
 void help_exit(void)
@@ -86,8 +81,7 @@ void help_exit(void)
 }
 
 /**
- * Function declaration aux_help
- * Help information for the builtin help.
+ * aux_help - Help information for the builtin help.
  * Return: no return
  */
 void aux_help(void)
@@ -101,8 +95,7 @@ void aux_help(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * Function declaration help_alias
- * - Help information for the builtin alias.
+ * help_alias - Help information for the builtin alias.
  * Return: no return
  */
 void help_alias(void)
@@ -114,8 +107,7 @@ void help_alias(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * Function declaration help_cd 
- * - Help information for the builtin alias.
+ * help_cd - Help information for the builtin alias.
  * Return: no return
  */
 void help_cd(void)
