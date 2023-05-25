@@ -1,8 +1,8 @@
 #include "shell_header.h"
 
 /**
- * Function declaration getHelp_mgs_builtin
- * - a function that retrieves help messages according builtin
+ * getHelp_mgs_builtin - a function that retrieves
+ *       help messages according builtin
  * @shell_data: data structure (args and input)
  * Return: Return 0
 */
@@ -34,8 +34,7 @@ int getHelp_mgs_builtin(data_shell *shell_data)
 }
 
 /**
- * Function declaration getBuiltin
- * - builtin that pais the command in the arg
+ * getBuiltin - builtin that pais the command in the arg
  * @cmd: command
  * Return: function pointer of the builtin command
  */
@@ -62,8 +61,8 @@ int (*getBuiltin(char *cmd))(data_shell *)
 }
 
 /**
- * Function declaration getError_Builtin
- * - calls the error according the builtin, syntax or permission
+ *  getError_Builtin - calls the error according
+ *  the builtin, syntax or permission
  * @shell_data: data structure that contains arguments
  * @eval: error value
  * Return: error
