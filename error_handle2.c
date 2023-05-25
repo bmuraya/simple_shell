@@ -1,8 +1,7 @@
 #include "shell_header.h"
 
 /**
- * Function declaration err_env
- * - error message for env in get_env.
+ * err_env - error message for env in get_env.
  * @shell_data: data relevant (counter, arguments)
  * Return: error message.
  */
@@ -37,8 +36,7 @@ char *err_env(data_shell *shell_data)
 	return (error);
 }
 /**
- * Function delcaration err_path_126
- * - error message for path and failure denied permission.
+ * err_path_126 - error message for path and failure denied permission.
  * @shell_data: data relevant (counter, arguments).
  *
  * Return: The error string.
