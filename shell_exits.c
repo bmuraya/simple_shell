@@ -1,9 +1,7 @@
 #include "shell_header.h"
 
 /**
- * Function declaration exit_shell
- * - exits the shell
- *
+ * exit_shell - exits the shell
  * @shell_data: data relevant (status and args)
  * Return: 0 on success.
  */
