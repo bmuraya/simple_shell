@@ -1,12 +1,9 @@
 #include "shell_header.h"
-
 /**
- * Function declaration comp_env_var
- * - compares env variables names
+ * comp_env_var - compares env variables names
  * with the name passed.
  * @name_environ: name of the environment variable
  * @name: name passed
- *
  * Return: 0 if are not equal. Another value if they are.
  */
 int comp_env_var(const char *name_environ, const char *name)
@@ -20,16 +17,12 @@ int comp_env_var(const char *name_environ, const char *name)
 			return (0);
 		}
 	}
-
 	return (i + 1);
 }
-
 /**
- * Function declaration _getenv
- * - get an environment variable
+ * _getenv - get an environment variable
  * @name: name of the environment variable
  * @_environ: environment variable
- *
  * Return: value of the environment variable if is found.
  * In other case, returns NULL.
  */
@@ -53,21 +46,16 @@ char *_getenv(const char *name, char **_environ)
 			break;
 		}
 	}
-
 	return (ptr_env + mov);
 }
-
 /**
- * Function declaration _env
- * - prints the evironment variables
- *
+ * _env - prints the evironment variables
  * @shell_data: data relevant.
  * Return: 1 on success.
  */
 int _env(data_shell *shell_data)
 {
 	int i, j;
-
 	for (i = 0; shell_data->_environ[i]; i++)
 	{
 
@@ -78,24 +66,19 @@ int _env(data_shell *shell_data)
 		write(STDOUT_FILENO, "\n", 1);
 	}
 	shell_data->status = 0;
-
 	return (1);
 }
-
-
 /**
  * copy_info - copies info to create
  * a new env or alias
  * @name: name (env or alias)
  * @value: value (env or alias)
- *
  * Return: new env or alias.
  */
 char *copy_info(char *name, char *value)
 {
 	char *new;
 	int len_name, len_value, len;
-
 	len_name = _strlen(name);
 	len_value = _strlen(value);
 	len = len_name + len_value + 2;
@@ -104,13 +87,11 @@ char *copy_info(char *name, char *value)
 	_strcat(new, "=");
 	_strcat(new, value);
 	_strcat(new, "\0");
-
 	return (new);
 }
 
 /**
  * set_env - sets an environment variable
- *
  * @name: name of the environment variable
  * @value: value of the environment variable
  * @shell_data: data structure (environ)
@@ -139,33 +120,25 @@ void set_env(char *name, char *value, data_shell *shell_data)
 	shell_data->_environ[i] = copy_info(name, value);
 	shell_data->_environ[i + 1] = NULL;
 }
-
 /**
  * _setenv - compares env variables names
  * with the name passed.
  * @shell_data: data relevant (env name and env value)
- *
  * Return: 1 on success.
  */
 int _setenv(data_shell *shell_data)
 {
-
 	if (shell_data->args[1] == NULL || shell_data->args[2] == NULL)
 	{
 		getError_Builtin(shell_data, -1);
 		return (1);
 	}
-
 	set_env(shell_data->args[1], shell_data->args[2], shell_data);
-
 	return (1);
 }
-
 /**
  * _unsetenv - deletes a environment variable
- *
  * @shell_data: data relevant (env name)
- *
  * Return: 1 on success.
  */
 int _unsetenv(data_shell *shell_data)
