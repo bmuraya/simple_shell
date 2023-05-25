@@ -1,8 +1,7 @@
 #include "shell_header.h"
 
 /**
- * Function declaration _strcat 
- * - concatenate two strings
+ * _strcat- concatenate two strings
  * @dest: char pointer the dest of the copied str
  * @src: const char pointer the source of str
  * Return: the dest
@@ -25,8 +24,7 @@ char *_strcat(char *dest, const char *src)
 	return (dest);
 }
 /**
- * Pointer inizalization *_strcpy
- * - Copies the string pointed to by src.
+ * *_strcpy- Copies the string pointed to by src.
  * @dest: Type char pointer the dest of the copied str
  * @src: Type char pointer the source of str
  * Return: the dest.
@@ -45,8 +43,7 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * Function declaration _strcmp
- * - Function that compares two strings.
+ * _strcmp - Function that compares two strings.
  * @s1: type str compared
  * @s2: type str compared
  * Return: Always 0.
@@ -65,7 +62,7 @@ int _strcmp(char *s1, char *s2)
 	return (0);
 }
 /**
- * character inizlation _strchr - locates a character in a string,
+ * *_strchr - locates a character in a string,
  * @s: string.
  * @c: character.
  * Return: the pointer to the first occurrence of the character c.
@@ -73,7 +70,6 @@ int _strcmp(char *s1, char *s2)
 char *_strchr(char *s, char c)
 {
 	unsigned int i = 0;
-
 	for (; *(s + i) != '\0'; i++)
 		if (*(s + i) == c)
 			return (s + i);
