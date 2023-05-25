@@ -7,10 +7,10 @@ It aims to learning  the Unix shell and a simple shell is to gain an understandi
 ## Builtins
 Our shell has support for the following built-in commands:
 
-| Command             | Definition                                                                                |
+| File             | Definition                                                                                |
 | ------------------- | ----------------------------------------------------------------------------------------- |
-| exit [n]            | Exit the shell, with an optional exit status, n.                                          |
-| env                 | Print the environment.                                                                    |
+| Main.c            |  Entry Point of the shell program.                                          |
+| shell.header                | prototype header file.                                                                    |
 | setenv [var][value] | Set an environment variable and value. If the variable exists, the value will be updated. |
 | alias[name[='value]]| Reads aliases name                                                                        |
 | unsetenv [var]      | Remove an environment variable.                                                           |
