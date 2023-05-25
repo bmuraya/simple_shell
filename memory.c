@@ -1,7 +1,6 @@
 #include "shell_header.h"
 
 /**
- * Function declaration _memorycopy
  * _memorycopy - copies information between void pointers.
  * @dstptr:  destination pointer.
  * @ptr: source pointer.
@@ -13,18 +12,14 @@ void _memorycopy(void *dstptr, const void *ptr, unsigned int size)
 {
 	char *char_ptr = (char *)ptr;
 	char *char_dstptr = (char *)dstptr;
-	 unsigned int i;
-	 i = 0;
+	unsigned int i;
 
-    while (i < size)
-    {
-        char_dstptr[i] = char_ptr[i];
-        i++;
-    }
+	for (i = 0; i < size; i++)
+		char_dstptr[i] = char_ptr[i];
 }
 
 /**
- * Function declaration realloc_mem_blc_db - reallocates a memory block of a double pointer.
+ * realloc_mem_blc_db - reallocates a memory block of a double pointer.
  * @ptr: double pointer to the memory previously allocated.
  * @old_size: size, in bytes, of the allocated space of ptr.
  * @new_size: new size, in bytes, of the new memory block.
@@ -57,7 +52,7 @@ char **realloc_mem_blc_db(char **ptr, unsigned int old_size, unsigned int new_si
 }
 
 /**
- * Function declaration realloc_mem_blc - reallocates a memory block.
+ * realloc_mem_blc - reallocates a memory block.
  * @ptr: pointer to the memory previously allocated.
  * @old_size: size, in bytes, of the allocated space of ptr.
  * @new_size: new size, in bytes, of the new memory block.
