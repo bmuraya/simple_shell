@@ -1,8 +1,7 @@
 #include "shell_header.h"
 
 /**
- * Function declaration count_rep_char 
- * - counts the repetitions of a char
+ * count_rep_char - counts the repetitions of a char
  *
  * @input: input string
  * @i: index
@@ -17,8 +16,7 @@ int count_rep_char(char *input, int i)
 }
 
 /**
- * Function declaration fd_syt_errors 
- * - finds syntax errors
+ * fd_syt_errors - finds syntax errors
  *
  * @input: input string
  * @i: index
@@ -71,8 +69,7 @@ int fd_syt_errors(char *input, int i, char last)
 }
 
 /**
- * Function declaration indx_first_char
- * - finds index of the first char
+ * indx_first_char - finds index of the first char
  *
  * @input: input string
  * @i: index
@@ -96,8 +93,7 @@ int indx_first_char(char *input, int *i)
 }
 
 /**
- * Function declaration print_syt_error 
- * - prints when a syntax error is found
+ * print_syt_error - prints when a syntax error is found
  *
  * @shell_data: data structure
  * @input: input string
@@ -150,8 +146,7 @@ void print_syt_error(data_shell *shell_data, char *input, int i, int bool)
 }
 
 /**
- * Function declaration check_syntax_error 
- * - intermediate function to
+ * check_syntax_error - intermediate function to
  * find and print a syntax error
  *
  * @shell_data: data structure
