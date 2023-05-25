@@ -1,8 +1,7 @@
 #include "shell_header.h"
 
 /**
- * function Delcaration strcat_cd 
- * - function that concatenates the message for cd error
+ * strcat_cd - function that concatenates the message for cd error
  *
  * @shell_data: data relevant (directory)
  * @msg: message to print
@@ -40,8 +39,7 @@ char *strcat_cd(data_shell *shell_data, char *msg, char *error, char *ver_str)
 }
 
 /**
- * function Delcaration err_get_cd
- * - error message for cd command in get_cd
+ * err_get_cd - error message for cd command in get_cd
  * @shell_data: data relevant (directory)
  * Return: Error message
  */
@@ -79,9 +77,8 @@ char *err_get_cd(data_shell *shell_data)
 	return (error);
 }
 
-/*
- * function Delcaration err_not_found
- * - generic error message for command not found
+/**
+ * err_not_found - generic error message for command not found
  * @shell_data: data relevant (counter, arguments)
  * Return: Error message
  */
@@ -113,8 +110,7 @@ char *err_not_found(data_shell *shell_data)
 }
 
 /**
- * function Delcaration err_exit_shell 
- * - generic error message for exit in get_exit
+ * err_exit_shell - generic error message for exit in get_exit
  * @shell_data: data relevant (counter, arguments)
  *
  * Return: Error message
