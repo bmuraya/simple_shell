@@ -1,6 +1,6 @@
 #include "shell_header.h"
 
-/**
+/*
  * get_Signal - Handle the crtl + c call in prompt
  * @sig: Signal handler
  */
