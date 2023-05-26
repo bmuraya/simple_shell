@@ -8,18 +8,22 @@
 
 void free_sp_list(sp_list **head)
 {
+	sp_list *curr, *temp;
+
 	if (head != NULL)
 	{
-		sp_list *curr, *temp;
-
-		for (curr = *head; curr != NULL; curr = curr->next)
+		curr = *head;
+		while (curr != NULL)
 		{
 			temp = curr;
+			curr = curr->next;
 			free(temp);
 		}
+
 		*head = NULL;
 	}
 }
+
 
 /**
  * addVar_node - adds a variable at the end
