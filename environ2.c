@@ -12,6 +12,7 @@ void set_env(char *name, char *value, data_shell *shell_data)
 	int i;
 
 	char *var_env, *name_env;
+	size_t environ_size = sizeof(char *) * (i + 2);
 
 	for (i = 0; shell_data->_environ[i]; i++)
 	{
@@ -27,7 +28,7 @@ void set_env(char *name, char *value, data_shell *shell_data)
 		free(var_env);
 	}
 
-shell_data->_environ = relc_mem(shell_data->_environ, i, sizeof(char *) * (i + 2));
+shell_data->_environ = relc_mem(shell_data->_environ, i, environ_size);
 shell_data->_environ[i] = copy_info(name, value);
 shell_data->_environ[i + 1] = NULL;
 }
