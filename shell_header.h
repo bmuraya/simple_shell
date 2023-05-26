@@ -42,16 +42,16 @@ typedef struct data
 } data_shell;
 
 /**
- * struct separatorlist_s - single linked list
+ * struct sp_list_s - single linked list
  * @separator: ; | &
  * @next: next node
  * Description: single linked list to store separators
  */
-typedef struct separatorlist_s
+typedef struct sp_list_s
 {
 	char separator;
-	struct separatorlist_s *next;
-} separatorlist;
+	struct sp_list_s *next;
+} sp_list;
 
 /**
  * struct line_list_s - single linked list
@@ -93,8 +93,8 @@ typedef struct builtin_s
 } builtin_t;
 
 /* lists.c */
-separatorlist *addseparator_node_end(separatorlist **head, char sep);
-void free_separatorlist(separatorlist **head);
+sp_list *addseparator_node_end(sp_list **head, char sep);
+void free_sp_list(sp_list **head);
 line_list *addlinenode(line_list **head, char *line);
 void freeline_list(line_list **head);
 r_var *addVar_node(r_var **head, int lvar, char *var, int lval);
@@ -110,7 +110,7 @@ int _strspn(char *s, char *accept);
 /* memory.c */
 void _memorycopy(void *dstptr, const void *ptr, unsigned int size);
 void *realloc_mem_blc(void *ptr, unsigned int old_size, unsigned int new_size);
-char **realloc_mem_blc_db(char **ptr, unsigned int old_size, unsigned int new_size);
+char **relc_mem(char **ptr, unsigned int old_size, unsigned int new_size);
 
 /* string_mem.c */
 char *_strdup(const char *s);
@@ -135,8 +135,8 @@ void shell_loop(data_shell *shell_data);
 
 /* split.c */
 char *swap_char(char *input, int bool);
-void add_nodes(separatorlist **head_s, line_list **head_l, char *input);
-void go_next(separatorlist **list_s, line_list **list_l, data_shell *shell_data);
+void add_nodes(sp_list **head_s, line_list **head_l, char *input);
+void go_next(sp_list **list_s, line_list **list_l, data_shell *shell_data);
 int split_commands(data_shell *shell_data, char *input);
 char **split_line(char *input);
 
