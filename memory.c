@@ -19,7 +19,7 @@ void _memorycopy(void *dstptr, const void *ptr, unsigned int size)
 }
 
 /**
- * realloc_mem_blc_db - reallocates a memory block of a double pointer.
+ * relc_mem - reallocates a memory block of a double pointer.
  * @ptr: double pointer to the memory previously allocated.
  * @old_size: size, in bytes, of the allocated space of ptr.
  * @new_size: new size, in bytes, of the new memory block.
@@ -28,7 +28,7 @@ void _memorycopy(void *dstptr, const void *ptr, unsigned int size)
  * if new_size == old_size, returns ptr without changes.
  * if malloc fails, returns NULL.
  */
-char **realloc_mem_blc_db(char **ptr, unsigned int old_size, unsigned int new_size)
+char **relc_mem(char **ptr, unsigned int old_size, unsigned int new_size)
 {
 	char **dstptr;
 	unsigned int i;
