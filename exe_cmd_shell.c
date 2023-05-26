@@ -1,8 +1,7 @@
 #include "shell_header.h"
 
 /**
- * Function declaration sh_execc 
- * - executes command lines
+ *  sh_execc - executes command lines
  *
  * @shell_data: data relevant (args and input)
  * Return: 1 on success.
@@ -53,8 +52,7 @@ int sh_execc(data_shell *shell_data)
 
 
 /**
- * Function declaration if_is_executable
- * - determines if is an executable
+ *  if_is_executable - determines if is an executable
  *
  * @shell_data: data structure
  * Return: 0 if is not an executable, other number if it does
@@ -99,8 +97,7 @@ int if_is_executable(data_shell *shell_data)
 }
 
 /**
- * Function declaration is_currdir
- * - checks ":" if is in the current directory.
+ *  is_currdir - checks ":" if is in the current directory.
  * @path: type char pointer char.
  * @i: type int pointer of index.
  * Return: 1 if the path is searchable in the cd, 0 otherwise.
@@ -122,8 +119,7 @@ int is_currdir(char *path, int *i)
 }
 
 /**
- * Function declaration _which
- * - locates a command
+ *  _which - locates a command
  *
  * @cmd: command name
  * @_environ: environment variable
@@ -174,8 +170,7 @@ char *_which(char *cmd, char **_environ)
 
 
 /**
- * Function declaration check_error_cmd
- * - verifies if user has permissions to access
+ *  check_error_cmd - verifies if user has permissions to access
  *
  * @dir: destination directory
  * @shell_data: data structure
