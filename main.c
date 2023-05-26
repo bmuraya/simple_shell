@@ -2,7 +2,6 @@
 
 /**
  * data_free - frees data structure
- *
  * @shell_data: data structure
  * Return: no return
  */
@@ -23,7 +22,6 @@ void data_free(data_shell *shell_data)
 
 /**
  * data_set -data structure
- *
  * @shell_data: data structure
  * @av: argv
  * Return: no return
